@@ -135,18 +135,6 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-
-  button{
-    background: none;
-    border: 1px solid ${colors.primaryBlack};
-    padding: 10px 80px;
-    text-transform: capitalize;
-    &:hover{
-      background: ${colors.primaryBlack};
-      color: ${colors.white};
-    }
-  }
-
   .mob-buy-button{
     background: ${colors.white};
     box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);

@@ -46,7 +46,10 @@ export const BoxButton = styled.div`
 	> button {
 		margin: 20px auto;
 		color: ${colors.white};
-		border-color: ${colors.white};
+		background: none;
+		border: 1px solid ${colors.white};
+		padding: 10px 80px;
+		text-transform: capitalize;
 		&:hover {
 			background: ${colors.white};
 			color: ${colors.primary};

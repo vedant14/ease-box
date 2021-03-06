@@ -22,5 +22,13 @@ export const AboutText = styled.span`
 	}
 	> button {
 		margin: 20px auto;
+		background: none;
+		border: 1px solid ${colors.primaryBlack};
+		padding: 10px 80px;
+		text-transform: capitalize;
+		&:hover {
+			background: ${colors.primaryBlack};
+			color: ${colors.white};
+		}
 	}
 `
