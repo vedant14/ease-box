@@ -5,6 +5,7 @@ import {
 	SEO,
 	Hero,
 	About,
+	Boxes,
 	Details,
 	FAQ,
 	Footer,
@@ -17,6 +18,7 @@ const IndexPage = () => {
 			<Header />
 			<Hero />
 			<About />
+			<Boxes />
 			<Details />
 			<FAQ />
 			<Footer />

@@ -138,7 +138,7 @@ export const GlobalStyles = createGlobalStyle`
 
   button{
     background: none;
-    border: 1px solid #33077E;
+    border: 1px solid ${colors.primaryBlack};
     padding: 10px 80px;
     text-transform: capitalize;
     &:hover{
@@ -160,29 +160,12 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .slick-arrow:before{
-    color: ${colors.primaryBlack};
+ .slick-arrow{
+  display: none !important;
+ }
+ .slick-dots{
+  >li {
+    color: black;
   }
-  .slick-prev{
-    position: absolute;
-    top: 100%;
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    z-index: 100;
-    left: 45%;
-  }
-  .slick-next{
-    position: absolute;
-    top: 100%;
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    z-index: 100;
-    left: 55%;
-  }
+ }
 `

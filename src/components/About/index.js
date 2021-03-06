@@ -1,5 +1,5 @@
 import React from "react"
-import { AboutWrapper, AboutText, HeaderContainer } from "./styles"
+import { AboutWrapper, AboutText } from "./styles"
 import { Container } from "react-bootstrap"
 export function About() {
 	return (
