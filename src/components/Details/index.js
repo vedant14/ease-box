@@ -2,6 +2,8 @@ import React from "react"
 import { DetailsWrapper, MobileWrapper } from "./styles"
 import { useStaticQuery, graphql } from "gatsby"
 import { Scroll } from "../Scroll"
+import Img from "gatsby-image"
+
 export function Details() {
 	const text = useStaticQuery(graphql`
 		query {
@@ -9,6 +11,13 @@ export function Details() {
 				html
 				frontmatter {
 					heading
+					image {
+						childImageSharp {
+							fluid(maxWidth: 220) {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
 				}
 			}
 		}
@@ -20,6 +29,9 @@ export function Details() {
 				<div>
 					<h1>{text.markdownRemark.frontmatter.heading}</h1>
 				</div>
+				<Img
+					fluid={text.markdownRemark.frontmatter.image.childImageSharp.fluid}
+				/>
 				<div
 					dangerouslySetInnerHTML={{
 						__html: text.markdownRemark.html,
