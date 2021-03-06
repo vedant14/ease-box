@@ -18,14 +18,6 @@ export function MobileMenu({ menuOpen, items, setMenuOpen }) {
               <AnchorLink href={`#${item.link}`}>{item.name}</AnchorLink>
             </li>
           ))}
-          <button className="mob-buy-button">
-            <h4>
-              Buy the course {"  "}
-              <span role="img" aria-label="rocket">
-                🚀
-              </span>
-            </h4>
-          </button>
         </NavScroll>
       </Wrapper>
     </>

@@ -4,7 +4,7 @@ export const colors = {
   primaryBlack: "#000000",
   washedBlack: "#635C60",
   primary: "#AC3571",
-  off_primary: "#BCADDB",
+  off_primary: "#A596FF",
   secondary: "#256A61",
   washedGrey: "#EBEEF1",
   white: "#FFFFFF",
@@ -72,6 +72,13 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  small{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
   p {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -129,15 +136,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
-  .buy-button{
-    background: ${colors.primary};
-    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-    > h4 {
+  button{
+    background: none;
+    border: 1px solid #33077E;
+    padding: 10px 80px;
+    text-transform: capitalize;
+    &:hover{
+      background: ${colors.primaryBlack};
       color: ${colors.white};
-      padding: 10px 9px;
-      margin: 0px;
-      text-transform: capitalize;
     }
   }
 

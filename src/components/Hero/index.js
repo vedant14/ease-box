@@ -1,26 +1,39 @@
 import React from "react"
-import {
-	HeroWrapper,
-	HeaderImage,
-	HeaderText,
-	HeaderContainer,
-	BlobImage,
-	MobileBlobImage,
-} from "./styles"
-import HeroImage from "../../images/header.svg"
-import Blob from "../../images/blob.svg"
-import MobileBlob from "../../images/mobileBlob.svg"
+import { HeroWrapper, HeaderImage, HeaderText, HeaderContainer } from "./styles"
+import { useStaticQuery, graphql } from "gatsby"
+import AnchorLink from "react-anchor-link-smooth-scroll"
+
 export function Hero() {
+	const hero = useStaticQuery(graphql`
+		query {
+			markdownRemark(frontmatter: { type: { eq: "hero" } }) {
+				frontmatter {
+					heading
+					subtitle
+					image {
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
+
 	return (
 		<HeroWrapper id="Home">
 			<HeaderContainer>
 				<HeaderText>
-					<h1>This course will change your life!</h1>
-					<h3>- #FakeNewsButTrue</h3>
+					<h1>{hero.markdownRemark.frontmatter.heading}</h1>
+					<AnchorLink href="#Details">
+						<p>{hero.markdownRemark.frontmatter.subtitle}</p>
+					</AnchorLink>
 				</HeaderText>
-				<BlobImage src={Blob} alt="Blob" />
-				<MobileBlobImage src={MobileBlob} alt="Blob" />
-				<HeaderImage src={HeroImage} alt="Header" />
+				<HeaderImage
+					fluid={hero.markdownRemark.frontmatter.image.childImageSharp.fluid}
+				/>
 			</HeaderContainer>
 		</HeroWrapper>
 	)

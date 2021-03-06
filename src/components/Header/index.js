@@ -4,6 +4,7 @@ import { Menu } from "../Menu"
 import { Hamburger } from "../Hamburger"
 import { MobileMenu } from "../MobileMenu"
 import { useSiteConfigQuery } from "../../hooks/useSiteConfigQuery"
+import LogoImage from "../../images/Logo.svg"
 
 export function Header() {
 	const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +13,7 @@ export function Header() {
 		<HeaderWrapper>
 			<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			<Logo to="/">
-				<h1>LOGO</h1>
+				<img src={LogoImage} alt="Logo" />
 			</Logo>
 			<Menu items={siteConfig.menu} />
 			<MobileMenu

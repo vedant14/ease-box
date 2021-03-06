@@ -19,17 +19,11 @@ export const HeaderWrapper = styled.header`
 `
 
 export const Logo = styled(Link)`
-  margin: auto;
-  > h1 {
-    margin: 0px;
-  }
-  @media screen and (min-width: 1150px) {
-    margin: auto 50px auto 100px;
-  }
+  margin: auto 30px;
   > img {
-    max-width: 100px;
-    @media screen and (min-width: 768px) {
-      max-width: 200px;
-    }
+    width: 80px;
+  }
+  @media screen and (min-width: 728px) {
+    margin: auto 50px auto 100px;
   }
 `

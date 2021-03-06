@@ -32,7 +32,7 @@ export const HamburgerIcon = styled.div`
     transform: ${props => (props.menuOpen ? "scale(0)" : "")};
   }
 
-  @media screen and (min-width: 1150px) {
+  @media screen and (min-width: 728px) {
     display: none;
   }
 `

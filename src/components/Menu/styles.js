@@ -50,6 +50,9 @@ export const Nav = styled.ul`
       margin: auto 10px;
     }
     &:hover {
+      border: none;
+      background: none;
+      color: ${colors.primaryBlack};
       > img {
         animation-iteration-count: infinite;
         animation: shake 0.5s;
@@ -91,7 +94,7 @@ export const Nav = styled.ul`
       }
     }
   }
-  @media screen and (min-width: 1150px) {
+  @media screen and (min-width: 728px) {
     display: flex;
   }
 `

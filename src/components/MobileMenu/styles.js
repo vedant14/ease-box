@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
   box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 
-  @media screen and (min-width: 1150px) {
+  @media screen and (min-width: 728px) {
     display: none;
   }
 `

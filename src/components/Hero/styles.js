@@ -1,10 +1,18 @@
 import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 import { Container } from "react-bootstrap"
+import Img from "gatsby-image"
 
 export const HeroWrapper = styled.div`
-	color: ${colors.primaryBlack};
-	background: ${colors.washedGrey};
+	color: ${colors.white};
+	background: ${colors.primary};
+	@media (min-width: 768px) {
+		height: 500px;
+	}
+	@media (min-width: 1150px) {
+		height: 600px;
+	}
+	height: 400px;
 `
 
 export const HeaderContainer = styled(Container)`
@@ -17,59 +25,38 @@ export const HeaderContainer = styled(Container)`
 	}
 `
 
-export const HeaderText = styled.h1`
-	margin: 150px auto;
+export const HeaderText = styled.span`
+	margin: 70px auto 20px auto;
 	max-width: 300px;
-	z-index: 5;
+	text-align: left;
 	@media (min-width: 768px) {
-		margin: 150px 0px;
-		max-width: 400px;
-	}
-	@media (min-width: 1024px) {
-		margin: 150px 0px;
+		margin: 50% 0px 0px 0px;
 		max-width: 450px;
+		text-align: right;
+	}
+	@media (min-width: 1150px) {
+		margin: 40% 0px 0px 0px;
+		max-width: 550px;
+		text-align: right;
+	}
+	> a {
+		color: ${colors.white};
+		text-decoration: underline;
 	}
 `
 
-export const HeaderImage = styled.img`
-	height: 355px;
-	width: 355px;
+export const HeaderImage = styled(Img)`
 	z-index: 5;
-	display: none;
+	width: 80%;
+	margin: auto;
 	@media (min-width: 768px) {
-		display: flex;
-		margin: 50px 0px 100px auto;
+		margin: 100px 0px 100px auto;
+		width: 455px;
 		max-width: 80%;
 	}
-	@media (min-width: 1024px) {
-		display: flex;
+	@media (min-width: 1150px) {
+		width: 455px;
 		margin: 100px 0px 100px auto;
 		max-width: 80%;
-	}
-`
-
-export const BlobImage = styled.img`
-	position: absolute;
-	display: none;
-	@media (min-width: 768px) {
-		display: block;
-		left: 25%;
-		top: 10%;
-		width: 450px;
-	}
-	@media (min-width: 1024px) {
-		left: 20%;
-		top: 5%;
-		width: 600px;
-	}
-`
-
-export const MobileBlobImage = styled.img`
-	position: absolute;
-	display: block;
-	top: 10%;
-	right: 0%;
-	@media (min-width: 768px) {
-		display: none;
 	}
 `

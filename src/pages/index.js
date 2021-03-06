@@ -4,12 +4,8 @@ import {
 	Header,
 	SEO,
 	Hero,
-	Apply,
-	Story,
+	About,
 	Details,
-	WhoFor,
-	Author,
-	Testimonial,
 	FAQ,
 	Footer,
 } from "../components"
@@ -17,19 +13,11 @@ import {
 const IndexPage = () => {
 	return (
 		<Layout color>
-			<SEO
-				title="Personal Finance Course by Abhishek Agrawal"
-				description="Personal Finance Course by Abhishek Agrawal"
-			/>
+			<SEO title="Ease Box" description="Move-in with Convenience" />
 			<Header />
 			<Hero />
-			<Apply />
-			<Story />
+			<About />
 			<Details />
-			<WhoFor />
-			<Author />
-			<Apply />
-			<Testimonial />
 			<FAQ />
 			<Footer />
 		</Layout>
