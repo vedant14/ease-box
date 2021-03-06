@@ -30,7 +30,7 @@ export function Footer() {
 					</div>
 					<div>
 						<img src="https://dummyimage.com/600x400/000/fff" />
-						<h3>Shop our boxes</h3>
+						<h3>Shop our boxes ⟶</h3>
 					</div>
 				</Container>
 			</div>

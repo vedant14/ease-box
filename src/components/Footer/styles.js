@@ -22,18 +22,27 @@ export const FooterWrapper = styled.div`
 			margin: auto;
 			grid-template-columns: 1fr;
 			grid-gap: 5px;
+			grid-template-areas: "img" "link";
 			@media (min-width: 768px) {
 				padding: 50px 0px;
 				grid-template-columns: 1fr 1fr;
+				grid-template-areas: "link img";
 			}
 			> div:first-child {
+				grid-area: link;
 				border-top: 5px solid ${colors.primaryBlack};
+				margin: 10px auto;
 				@media (min-width: 768px) {
+					margin: auto 0px;
 					border-top: none;
 					border-right: 5px solid ${colors.primaryBlack};
 				}
 				> ul {
 					padding-inline-start: 0px;
+					margin-top: 30px;
+					@media (min-width: 768px) {
+						margin-top: 0px;
+					}
 					> li {
 						color: ${colors.primaryBlack};
 						display: flex;
@@ -49,11 +58,15 @@ export const FooterWrapper = styled.div`
 				}
 			}
 			> div:last-child {
+				grid-area: img;
 				margin: auto;
 				text-align: center;
 				> img {
-					width: 300px;
+					width: 200px;
 					margin-bottom: 10px;
+					@media (min-width: 768px) {
+						width: 300px;
+					}
 				}
 			}
 		}
