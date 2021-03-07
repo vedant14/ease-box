@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 export function Hero() {
-	const hero = useStaticQuery(graphql`
+	const heroText = useStaticQuery(graphql`
 		query {
 			markdownRemark(frontmatter: { type: { eq: "hero" } }) {
 				frontmatter {
@@ -26,13 +26,15 @@ export function Hero() {
 		<HeroWrapper id="Home">
 			<HeaderContainer>
 				<HeaderText>
-					<h1>{hero.markdownRemark.frontmatter.heading}</h1>
+					<h1>{heroText.markdownRemark.frontmatter.heading}</h1>
 					<AnchorLink href="#Details">
-						<p>{hero.markdownRemark.frontmatter.subtitle}</p>
+						<p>{heroText.markdownRemark.frontmatter.subtitle}</p>
 					</AnchorLink>
 				</HeaderText>
 				<HeaderImage
-					fluid={hero.markdownRemark.frontmatter.image.childImageSharp.fluid}
+					fluid={
+						heroText.markdownRemark.frontmatter.image.childImageSharp.fluid
+					}
 				/>
 			</HeaderContainer>
 		</HeroWrapper>
