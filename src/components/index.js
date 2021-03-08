@@ -5,6 +5,6 @@ export * from "./Header"
 export * from "./About"
 export * from "./Boxes"
 export * from "./Details"
-
 export * from "./FAQ"
 export * from "./Footer"
+export * from "./ProductList"

@@ -10,7 +10,7 @@ export const AboutText = styled.span`
 	margin: auto;
 	max-width: 300px;
 	display: block;
-	padding: 150px 0px;
+	padding: 65% 0px;
 	text-align: center;
 	@media (min-width: 768px) {
 		padding: 200px 0px;

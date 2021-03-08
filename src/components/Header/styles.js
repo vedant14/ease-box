@@ -19,7 +19,7 @@ export const HeaderWrapper = styled.header`
 `
 
 export const Logo = styled(Link)`
-  margin: auto 30px;
+  margin: auto 20%;
   > img {
     width: 80px;
   }

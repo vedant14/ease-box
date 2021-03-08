@@ -13,7 +13,7 @@ export function Details() {
 					heading
 					image {
 						childImageSharp {
-							fluid(maxWidth: 220) {
+							fluid(maxWidth: 500) {
 								...GatsbyImageSharpFluid
 							}
 						}

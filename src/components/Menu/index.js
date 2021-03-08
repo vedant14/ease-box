@@ -1,5 +1,5 @@
 import React from "react"
-import { Nav } from "./styles"
+import { Nav, BoxLink } from "./styles"
 import Scrollspy from "react-scrollspy"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import BoxVector from "../../images/box.svg"
@@ -18,10 +18,10 @@ export function Menu({ items }) {
 					</li>
 				))}
 			</Scrollspy>
-			<button>
+			<BoxLink to="/boxes">
 				<h4>Shop Boxes</h4>
 				<img src={BoxVector} alt="date" />
-			</button>
+			</BoxLink>
 		</Nav>
 	)
 }
