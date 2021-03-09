@@ -17,6 +17,9 @@ export const ProductContainer = styled.div`
 	> div {
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-template-areas:
+			"img"
+			"text";
 		grid-gap: 5px;
 		@media (min-width: 768px) {
 			grid-template-columns: 1fr 1fr;
@@ -46,7 +49,10 @@ export const ProductPrice = styled.div`
 	width: fit-content;
 	padding: 5px 10px;
 	border-radius: 5px;
-	margin: 40px auto;
+	margin: 20px auto;
+	@media (min-width: 768px) {
+		margin: 40px auto;
+	}
 	color: ${colors.white};
 `
 export const ProductImage = styled(Img)`
@@ -55,6 +61,7 @@ export const ProductImage = styled(Img)`
 `
 export const ProductText = styled.div`
 	margin: auto;
+	padding-bottom: 30px;
 	grid-area: text;
 	> ul {
 		padding-inline-start: 20px;

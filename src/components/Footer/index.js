@@ -2,6 +2,7 @@ import React from "react"
 import { FooterWrapper } from "./styles"
 import { Container } from "react-bootstrap"
 import Wave from "../../images/wave.svg"
+import { Link } from "gatsby"
 
 export function Footer() {
 	return (
@@ -30,7 +31,9 @@ export function Footer() {
 					</div>
 					<div>
 						<img src="https://dummyimage.com/600x400/000/fff" />
-						<h3>Shop our boxes ⟶</h3>
+						<h3>
+							<Link to="/boxes">Shop our boxes ⟶</Link>
+						</h3>
 					</div>
 				</Container>
 			</div>
