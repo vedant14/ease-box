@@ -10,7 +10,7 @@ const ProductPage = ({ data }) => {
 }
 
 export const PageQuery = graphql`
-	query ProductPageQuery($id: ID!) {
+	query ProductPageQuery($id: String!) {
 		airtable(id: { eq: $id }) {
 			data {
 				BoxName
