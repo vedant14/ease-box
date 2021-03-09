@@ -8,6 +8,7 @@ import {
 	ProductImage,
 	ProductText,
 } from "./styles"
+import { Container } from "react-bootstrap"
 
 export function ProductList() {
 	const products = useStaticQuery(graphql`
@@ -51,36 +52,38 @@ export function ProductList() {
 				<h2>Shop Boxes</h2>
 			</HeadStrip>
 			{products.allAirtable.edges.map(({ node }, i) => (
-				<ProductContainer key={i}>
-					<div>
-						<LabelStrip>
-							<small>{node.data.BoxLabel}</small>
-						</LabelStrip>
-						<ProductImage
-							fluid={
-								node.data.BoxAttachments.localFiles[0].childImageSharp.fluid
-							}
-						/>
-						<ProductPrice>Rs. {node.data.BoxPrice}</ProductPrice>
-					</div>
-					<ProductText>
-						<h2>{node.data.BoxName}</h2>
-						<h3>{node.data.BoxDescription}</h3>
-						<ul>
-							{node.data.BoxMapping.map(boxmap => (
-								<React.Fragment>
-									{boxmap.data.MappingProduct.map(product => (
-										<li>
-											<h4>
-												{boxmap.data.MappingQty}
-												{product.data.ProductName}
-											</h4>
-										</li>
-									))}
-								</React.Fragment>
-							))}
-						</ul>
-					</ProductText>
+				<ProductContainer key={i} col={i}>
+					<Container>
+						<div>
+							<LabelStrip>
+								<small>{node.data.BoxLabel}</small>
+							</LabelStrip>
+							<ProductImage
+								fluid={
+									node.data.BoxAttachments.localFiles[0].childImageSharp.fluid
+								}
+							/>
+							<ProductPrice>Rs. {node.data.BoxPrice}</ProductPrice>
+						</div>
+						<ProductText>
+							<h2>{node.data.BoxName}</h2>
+							<h3>{node.data.BoxDescription}</h3>
+							<ul>
+								{node.data.BoxMapping.map(boxmap => (
+									<React.Fragment>
+										{boxmap.data.MappingProduct.map(product => (
+											<li>
+												<h4>
+													{boxmap.data.MappingQty}
+													{product.data.ProductName}
+												</h4>
+											</li>
+										))}
+									</React.Fragment>
+								))}
+							</ul>
+						</ProductText>
+					</Container>
 				</ProductContainer>
 			))}
 		</div>

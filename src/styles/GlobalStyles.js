@@ -123,6 +123,15 @@ export const GlobalStyles = createGlobalStyle`
   .is-current{
     > a {
       color: ${colors.primaryBlack} !important;
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 5px;
+        background: ${colors.primaryBlack};
+        transition: width .3s;
+      }
     }
   }
   
