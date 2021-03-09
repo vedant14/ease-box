@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 import Scrollspy from "react-scrollspy"
-
+import { Link } from "gatsby"
 export const OverrideGlobalStyle = createGlobalStyle`
   body {
     overflow: ${props => (props.menuOpen ? "hidden" : "auto")}
@@ -45,12 +45,25 @@ export const NavScroll = styled(Scrollspy)`
     font-family: Epilogue, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.3rem;
     line-height: 50px;
     @media screen and (min-width: 728px) {
       font-size: 30px;
       top: 100px;
       line-height: 60px;
     }
+  }
+`
+
+export const BoxLink = styled(Link)`
+  margin: auto 100px auto auto;
+  border: none;
+  background: none;
+  color: ${colors.white} !important;
+  display: flex;
+  text-transform: capitalize;
+  > img {
+    margin: auto 10px;
+    width: 1.3rem;
   }
 `

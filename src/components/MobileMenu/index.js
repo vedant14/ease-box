@@ -1,7 +1,8 @@
 import React from "react"
 // Styles
-import { OverrideGlobalStyle, NavScroll, Wrapper } from "./styles"
+import { OverrideGlobalStyle, NavScroll, Wrapper, BoxLink } from "./styles"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import BoxVector from "../../images/box.svg"
 
 export function MobileMenu({ menuOpen, items, setMenuOpen }) {
   return (
@@ -18,6 +19,12 @@ export function MobileMenu({ menuOpen, items, setMenuOpen }) {
               <AnchorLink href={`#${item.link}`}>{item.name}</AnchorLink>
             </li>
           ))}
+          <li>
+            <BoxLink to="/boxes" onClick={() => setMenuOpen(false)}>
+              Shop Boxes
+              <img src={BoxVector} alt="date" />
+            </BoxLink>
+          </li>
         </NavScroll>
       </Wrapper>
     </>

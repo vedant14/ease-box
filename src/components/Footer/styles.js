@@ -61,6 +61,9 @@ export const FooterWrapper = styled.div`
 				grid-area: img;
 				margin: auto;
 				text-align: center;
+				> h3 > a {
+					color: ${colors.primaryBlack};
+				}
 				> img {
 					width: 200px;
 					margin-bottom: 10px;
