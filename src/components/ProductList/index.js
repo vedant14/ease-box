@@ -9,6 +9,7 @@ import {
 	ProductText,
 } from "./styles"
 import { Container } from "react-bootstrap"
+import { Link } from "gatsby"
 
 export function ProductList() {
 	const products = useStaticQuery(graphql`
@@ -16,6 +17,7 @@ export function ProductList() {
 			allAirtable(filter: { data: { BoxName: { ne: null } } }) {
 				edges {
 					node {
+						recordId
 						data {
 							BoxName
 							BoxPrice
@@ -54,7 +56,7 @@ export function ProductList() {
 			{products.allAirtable.edges.map(({ node }, i) => (
 				<ProductContainer key={i} col={i}>
 					<Container>
-						<div>
+						<Link to={node.recordId}>
 							<LabelStrip>
 								<small>{node.data.BoxLabel}</small>
 							</LabelStrip>
@@ -64,7 +66,7 @@ export function ProductList() {
 								}
 							/>
 							<ProductPrice>Rs. {node.data.BoxPrice}</ProductPrice>
-						</div>
+						</Link>
 						<ProductText>
 							<h2>{node.data.BoxName}</h2>
 							<h3>{node.data.BoxDescription}</h3>

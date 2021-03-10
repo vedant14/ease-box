@@ -119,6 +119,9 @@ export const GlobalStyles = createGlobalStyle`
       line-height: 20px;
     }
   }
+  hr {
+    border: 1px solid ${colors.primaryBlack};
+  }
 
   .is-current{
     > a {

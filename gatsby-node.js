@@ -18,10 +18,10 @@ exports.createPages = ({ graphql, actions }) => {
     // values in context Object are available in that page's query
     result.data.allAirtable.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.recordId}`,
+        path: `boxes/${node.recordId}`,
         component: path.resolve(`./src/template/product.js`),
         context: {
-          id: node.id,
+          RecordID: node.recordId,
         },
       })
     })

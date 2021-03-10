@@ -3,7 +3,7 @@ import { colors } from "../../styles/GlobalStyles"
 import { Container } from "react-bootstrap"
 
 export const DetailsWrapper = styled(Container)`
-	border: 1px solid ${colors.primary};
+	border: 3px solid ${colors.primary};
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas:

@@ -1,19 +1,47 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-const ProductPage = ({ data }) => {
+import { Layout, ProductHead, SEO, BestFor } from "../components"
+const ProductPage = ({
+	data: {
+		airtable: { data },
+	},
+}) => {
 	return (
-		<div>
-			<h1>{data.BoxName}</h1>
-		</div>
+		<Layout>
+			<SEO />
+			<ProductHead data={data} />
+			<BestFor />
+		</Layout>
 	)
 }
 
-export const PageQuery = graphql`
-	query ProductPageQuery($id: String!) {
-		airtable(id: { eq: $id }) {
+export const query = graphql`
+	query ProductPageQuery($RecordID: String!) {
+		airtable(recordId: { eq: $RecordID }) {
 			data {
 				BoxName
+				BoxPrice
+				BoxLabel
+				BoxDescription
+				BoxMapping {
+					data {
+						MappingQty
+						MappingProduct {
+							data {
+								ProductName
+							}
+						}
+					}
+				}
+				BoxAttachments {
+					localFiles {
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
+				}
 			}
 		}
 	}
