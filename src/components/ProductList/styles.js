@@ -61,6 +61,7 @@ export const ProductImage = styled(Img)`
 `
 export const ProductText = styled.div`
 	margin: auto;
+	color: ${colors.primaryBlack};
 	padding-bottom: 30px;
 	grid-area: text;
 	> ul {
