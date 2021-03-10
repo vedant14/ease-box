@@ -1,6 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout, ProductHead, SEO, BestFor } from "../components"
+import {
+	Layout,
+	ProductHead,
+	SEO,
+	BestFor,
+	ProductDetails,
+} from "../components"
 const ProductPage = ({
 	data: {
 		airtable: { data },
@@ -11,6 +17,7 @@ const ProductPage = ({
 			<SEO />
 			<ProductHead data={data} />
 			<BestFor text={data.BoxAdditional} />
+			<ProductDetails items={data.BoxMapping} />
 		</Layout>
 	)
 }
@@ -34,6 +41,7 @@ export const query = graphql`
 						MappingProduct {
 							data {
 								ProductName
+								ProductDescription
 							}
 						}
 					}
