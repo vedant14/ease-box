@@ -44,7 +44,11 @@ module.exports = {
           {
             baseId: `apps0ewHWEXiQKPdn`,
             tableName: `Boxes`,
-            mapping: { BoxAttachments: `fileNode` },
+            mapping: {
+              BoxAttachments: `fileNode`,
+              BoxAdditional: `text/markdown`,
+            },
+            separateNodeType: true,
             tableLinks: [`BoxMapping`],
           },
           {

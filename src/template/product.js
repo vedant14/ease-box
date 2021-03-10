@@ -10,7 +10,7 @@ const ProductPage = ({
 		<Layout>
 			<SEO />
 			<ProductHead data={data} />
-			<BestFor />
+			<BestFor text={data.BoxAdditional} />
 		</Layout>
 	)
 }
@@ -23,6 +23,11 @@ export const query = graphql`
 				BoxPrice
 				BoxLabel
 				BoxDescription
+				BoxAdditional {
+					childMarkdownRemark {
+						html
+					}
+				}
 				BoxMapping {
 					data {
 						MappingQty

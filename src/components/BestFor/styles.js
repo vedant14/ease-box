@@ -5,35 +5,32 @@ import { Container } from "react-bootstrap"
 export const DetailsWrapper = styled(Container)`
 	border: 3px solid ${colors.primary};
 	> div:first-child {
-		margin: 50px auto 10px auto;
+		margin: 30px auto 10px auto;
 		text-align: center;
 		width: fit-content;
-		border-bottom: 1px solid ${colors.washedGrey};
+		border-bottom: 2px solid ${colors.secondary};
 		@media (min-width: 768px) {
 			text-align: left;
+			margin: 50px auto 10px auto;
 		}
-
+	}
 	> div:last-child {
-		@media (min-width: 768px) {
-			margin: 30px 0px;
-		}
-		@media (min-width: 1150px) {
-			margin: 0px 0px 30px 0px;
-		}
-		> ol {
-			clear: both;
+		margin-top: 30px;
+		margin-bottom: 50px;
+		ul {
+			padding: 0px 10px 0px 20px;
 			> li {
-				margin: 2em 0;
-				padding-top: 0px;
-				display: block;
-				position: relative;
-				counter-increment: inst;
-				padding-inline-start: 40px;
-				@media (min-width: 768px) {
-					padding-top: 1em;
-				}
-				@media (min-width: 1150px) {
-					padding-top: 3em;
+				margin: 20px 0px;
+				color: ${colors.primaryBlack};
+			}
+		}
+		@media (min-width: 768px) {
+			margin-top: 80px;
+			margin-bottom: 100px;
+			ul {
+				padding: 0px 100px;
+				> li {
+					margin: 40px 0px;
 				}
 			}
 		}

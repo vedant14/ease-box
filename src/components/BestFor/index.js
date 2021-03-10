@@ -3,24 +3,7 @@ import { DetailsWrapper, MobileWrapper } from "./styles"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-export function BestFor() {
-	const text = useStaticQuery(graphql`
-		query {
-			markdownRemark(frontmatter: { type: { eq: "details" } }) {
-				html
-				frontmatter {
-					heading
-					image {
-						childImageSharp {
-							fluid(maxWidth: 500) {
-								...GatsbyImageSharpFluid
-							}
-						}
-					}
-				}
-			}
-		}
-	`)
+export function BestFor({ text }) {
 	return (
 		<MobileWrapper>
 			<DetailsWrapper>
@@ -29,7 +12,7 @@ export function BestFor() {
 				</div>
 				<div
 					dangerouslySetInnerHTML={{
-						__html: text.markdownRemark.html,
+						__html: text.childMarkdownRemark.html,
 					}}
 				/>
 			</DetailsWrapper>
