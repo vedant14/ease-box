@@ -1,7 +1,7 @@
 ---
 type: "details"
 heading: "It's fast, it's affordable, it's easy."
-image: "../images/man.jpg"
+image: "../images/happy.png"
 ---
 
 1. It's a combination of learning and doing, and goes beyond just **'understanding'** to **'executing'**.

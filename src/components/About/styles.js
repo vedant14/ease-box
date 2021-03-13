@@ -18,11 +18,11 @@ export const AboutText = styled.span`
 	}
 	@media (min-width: 768px) {
 		padding: 200px 0px;
-		max-width: 650px;
+		max-width: 750px;
 	}
 	@media (min-width: 1150px) {
 		padding: 200px 0px;
-		max-width: 650px;
+		max-width: 800px;
 	}
 	> button {
 		margin: 20px auto;

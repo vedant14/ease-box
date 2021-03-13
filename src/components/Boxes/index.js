@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import {
 	Wrapper,
 	BoxText,
@@ -6,6 +7,8 @@ import {
 	BoxImages,
 	BoxButton,
 	Card,
+	Label,
+	ProductImage,
 } from "./styles"
 import Slider from "react-slick"
 import { Link } from "gatsby"
@@ -19,6 +22,34 @@ export function Boxes() {
 		slidesToShow: 1,
 		swipeToSlide: true,
 	}
+	const products = useStaticQuery(graphql`
+		query {
+			allAirtable(
+				sort: { order: ASC, fields: data___BoxName }
+				filter: { data: { BoxName: { ne: null } } }
+			) {
+				edges {
+					node {
+						recordId
+						data {
+							BoxName
+							BoxPrice
+							BoxLabel
+							BoxAttachments {
+								localFiles {
+									childImageSharp {
+										fluid {
+											...GatsbyImageSharpFluid
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
 	return (
 		<Wrapper>
 			<BoxContainer>
@@ -28,15 +59,16 @@ export function Boxes() {
 				</BoxText>
 				<BoxImages>
 					<Slider {...settings}>
-						<Card>
-							<img src="https://dummyimage.com/600x400/000/fff" />
-						</Card>
-						<Card>
-							<img src="https://dummyimage.com/600x400/000/fff" />
-						</Card>
-						<Card>
-							<img src="https://dummyimage.com/600x400/000/fff" />
-						</Card>
+						{products.allAirtable.edges.map(({ node }, i) => (
+							<Card key={i} to={`boxes/${node.recordId}`}>
+								<ProductImage
+									fluid={
+										node.data.BoxAttachments.localFiles[0].childImageSharp.fluid
+									}
+								/>
+								{/* <Label>{node.data.BoxName}</Label> */}
+							</Card>
+						))}
 					</Slider>
 				</BoxImages>
 				<BoxButton>

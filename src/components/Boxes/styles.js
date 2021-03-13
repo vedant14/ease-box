@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 import { Container } from "react-bootstrap"
-
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 export const Wrapper = styled.div`
 	color: ${colors.white};
 	background: ${colors.primary};
@@ -16,18 +17,15 @@ export const BoxContainer = styled(Container)`
 		"bb";
 	grid-gap: 5px;
 	@media (min-width: 728px) {
+		height: 500px;
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 		grid-template-areas:
 			"bt bt bi bi bi"
 			"bb bb bi bi bi";
 	}
-	@media (min-width: 768px) {
-		height: 500px;
-	}
 	@media (min-width: 1150px) {
 		height: 600px;
 	}
-	height: 400px;
 `
 
 export const BoxText = styled.div`
@@ -69,13 +67,28 @@ export const BoxImages = styled.div`
 	margin-bottom: 5px;
 	@media screen and (min-width: 728px) {
 		margin: auto 0px;
+		padding: 100px;
 	}
 `
 
-export const Card = styled.div`
-	> img {
-		max-width: 100%;
-		border-radius: 10px;
-		margin: auto;
+export const Card = styled(Link)`
+	border: 3px solid black;
+	background: white;
+	padding: 20px;
+	@media screen and (min-width: 728px) {
+		padding: 50px;
 	}
+`
+export const ProductImage = styled(Img)`
+	margin: auto;
+`
+
+export const Label = styled.h4`
+	position: absolute;
+	background: ${colors.secondary};
+	color: white;
+	right: 400px;
+	width: fit-content;
+	padding: 10px 15px;
+	border-radius: 10px;
 `

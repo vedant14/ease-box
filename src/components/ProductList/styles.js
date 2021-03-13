@@ -41,6 +41,7 @@ export const LabelStrip = styled.div`
 	border-radius: 5px;
 	left: 20%;
 	top: 15%;
+	z-index: 5;
 	color: ${colors.white};
 `
 
@@ -57,7 +58,7 @@ export const ProductPrice = styled.div`
 `
 export const ProductImage = styled(Img)`
 	margin: auto;
-	max-width: 400px;
+	width: 400px;
 `
 export const ProductText = styled.div`
 	margin: auto;

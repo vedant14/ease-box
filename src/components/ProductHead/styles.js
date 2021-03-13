@@ -31,7 +31,7 @@ export const LabelStrip = styled.small`
 export const ProductImage = styled.div`
 	grid-area: img;
 	background: ${colors.nav};
-	padding: 40px;
+	padding: 30px;
 	margin-bottom: 25px;
 	@media (min-width: 768px) {
 		margin-bottom: 0px;

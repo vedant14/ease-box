@@ -14,7 +14,10 @@ import { Link } from "gatsby"
 export function ProductList() {
 	const products = useStaticQuery(graphql`
 		query {
-			allAirtable(filter: { data: { BoxName: { ne: null } } }) {
+			allAirtable(
+				sort: { order: ASC, fields: data___BoxName }
+				filter: { data: { BoxName: { ne: null } } }
+			) {
 				edges {
 					node {
 						recordId
@@ -59,7 +62,7 @@ export function ProductList() {
 						<Container>
 							<div>
 								<LabelStrip>
-									<small>{node.data.BoxLabel}</small>
+									{node.data.BoxLabel && <small>{node.data.BoxLabel}</small>}
 								</LabelStrip>
 								<ProductImage
 									fluid={
