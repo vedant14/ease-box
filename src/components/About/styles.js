@@ -11,7 +11,11 @@ export const AboutText = styled.span`
 	max-width: 300px;
 	display: block;
 	padding: 65% 0px;
+	text-transform: none;
 	text-align: center;
+	> p > em {
+		font-weight: 500;
+	}
 	@media (min-width: 768px) {
 		padding: 200px 0px;
 		max-width: 650px;
@@ -25,7 +29,7 @@ export const AboutText = styled.span`
 		background: none;
 		border: 1px solid ${colors.primaryBlack};
 		padding: 10px 80px;
-		text-transform: capitalize;
+		text-transform: inherit;
 		&:hover {
 			background: ${colors.primaryBlack};
 			color: ${colors.white};

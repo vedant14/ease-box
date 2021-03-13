@@ -8,6 +8,7 @@ import {
 	Card,
 } from "./styles"
 import Slider from "react-slick"
+import { Link } from "gatsby"
 
 export function Boxes() {
 	const settings = {
@@ -39,7 +40,7 @@ export function Boxes() {
 					</Slider>
 				</BoxImages>
 				<BoxButton>
-					<button>View All</button>
+					<Link to="/boxes">View All</Link>
 				</BoxButton>
 			</BoxContainer>
 		</Wrapper>

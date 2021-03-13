@@ -35,7 +35,6 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    text-transform: capitalize;
     @media screen and (min-width: 768px) {
       font-size: 40px;
     }

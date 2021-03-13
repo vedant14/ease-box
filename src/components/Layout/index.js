@@ -5,15 +5,15 @@ import { FAQ } from "../FAQ"
 import { Footer } from "../Footer"
 import { Details } from "../Details"
 import { GlobalStyles } from "../../styles/GlobalStyles"
-export function Layout({ children }) {
+export function Layout({ children, box, faq }) {
 	return (
 		<div>
 			<GlobalStyles />
 			<LayoutWrapper>
 				<Header />
 				<main>{children}</main>
-				<Details />
-				<FAQ />
+				{box && <Details />}
+				{faq && <FAQ />}
 				<Footer />
 			</LayoutWrapper>
 		</div>

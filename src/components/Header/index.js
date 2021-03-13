@@ -9,9 +9,9 @@ import LogoImage from "../../images/Logo.svg"
 export function Header() {
 	const [menuOpen, setMenuOpen] = useState(false)
 	const siteConfig = useSiteConfigQuery()
+	const pathname = window.location.pathname
 	return (
 		<HeaderWrapper>
-			<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			<Logo to="/">
 				<img src={LogoImage} alt="Logo" />
 			</Logo>
@@ -21,6 +21,7 @@ export function Header() {
 				setMenuOpen={setMenuOpen}
 				items={siteConfig.menu}
 			/>
+			<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 		</HeaderWrapper>
 	)
 }

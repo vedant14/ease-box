@@ -13,13 +13,13 @@ export const HeaderWrapper = styled.header`
   @media screen and (min-width: 1150px) {
     min-height: 100px;
   }
-  > div:first-child {
+  > div:last-child {
     margin: 10px 20px;
   }
 `
 
 export const Logo = styled(Link)`
-  margin: auto 30px auto auto;
+  margin: auto auto auto 30px;
   > img {
     width: 80px;
   }

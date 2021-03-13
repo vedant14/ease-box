@@ -21,7 +21,13 @@ export const BoxContainer = styled(Container)`
 			"bt bt bi bi bi"
 			"bb bb bi bi bi";
 	}
-	overflow: hidden;
+	@media (min-width: 768px) {
+		height: 500px;
+	}
+	@media (min-width: 1150px) {
+		height: 600px;
+	}
+	height: 400px;
 `
 
 export const BoxText = styled.div`
@@ -39,16 +45,16 @@ export const BoxText = styled.div`
 
 export const BoxButton = styled.div`
 	grid-area: bb;
-	margin: 20px auto;
+	margin: 40px auto;
 	@media (min-width: 728px) {
 		margin: 0px auto;
 	}
-	> button {
+	> a {
 		margin: 20px auto;
 		color: ${colors.white};
 		background: none;
 		border: 1px solid ${colors.white};
-		padding: 10px 80px;
+		padding: 15px 80px;
 		text-transform: capitalize;
 		&:hover {
 			background: ${colors.white};
@@ -62,8 +68,7 @@ export const BoxImages = styled.div`
 	margin-top: 5px;
 	margin-bottom: 5px;
 	@media screen and (min-width: 728px) {
-		margin-top: 80px;
-		margin-bottom: 80px;
+		margin: auto 0px;
 	}
 `
 

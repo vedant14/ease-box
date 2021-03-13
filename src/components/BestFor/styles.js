@@ -25,7 +25,7 @@ export const DetailsWrapper = styled(Container)`
 			}
 		}
 		@media (min-width: 768px) {
-			margin-top: 80px;
+			margin-top: 60px;
 			margin-bottom: 100px;
 			ul {
 				padding: 0px 100px;

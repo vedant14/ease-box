@@ -10,8 +10,8 @@ export const OverrideGlobalStyle = createGlobalStyle`
 export const Wrapper = styled.div`
   display: block;
   position: fixed;
-  background: ${colors.primary};
-  left: ${props => (props.menuOpen ? "0px" : "-100%")};
+  background: ${colors.nav};
+  right: ${props => (props.menuOpen ? "0px" : "-100%")};
   width: 100%;
   height: 100%;
   top: 0px;
@@ -35,7 +35,7 @@ export const NavScroll = styled(Scrollspy)`
 
   a {
     text-decoration: none;
-    color: ${colors.washedGrey};
+    color: ${colors.primaryBlack};
   }
 
   li {
@@ -59,7 +59,7 @@ export const BoxLink = styled(Link)`
   margin: auto 100px auto auto;
   border: none;
   background: none;
-  color: ${colors.white} !important;
+  color: ${colors.primaryBlack} !important;
   display: flex;
   text-transform: capitalize;
   > img {

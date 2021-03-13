@@ -13,7 +13,7 @@ const ProductPage = ({
 	},
 }) => {
 	return (
-		<Layout>
+		<Layout box faq>
 			<SEO />
 			<ProductHead data={data} />
 			<BestFor text={data.BoxAdditional} />

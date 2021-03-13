@@ -4,20 +4,20 @@ export function ProductDetails({ items }) {
 	return (
 		<DetailsWrapper>
 			<h2>Product Details</h2>
-			<table>
+			<div>
 				{items.map(boxmap => (
 					<React.Fragment>
 						{boxmap.data.MappingProduct.map(product => (
-							<tr>
-								<td>
-									<h4>{product.data.ProductName}</h4>
-								</td>
-								<td>{product.data.ProductDescription}</td>
-							</tr>
+							<div>
+								<h3>
+									<strong>{product.data.ProductName}</strong>
+								</h3>
+								<h3>{product.data.ProductDescription}</h3>
+							</div>
 						))}
 					</React.Fragment>
 				))}
-			</table>
+			</div>
 		</DetailsWrapper>
 	)
 }

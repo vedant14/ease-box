@@ -28,15 +28,15 @@ export const HeaderContainer = styled(Container)`
 export const HeaderText = styled.span`
 	margin: 70px auto 20px auto;
 	max-width: 300px;
-	text-align: left;
+	text-align: center;
 	@media (min-width: 768px) {
 		margin: 50% 0px 0px 0px;
 		max-width: 450px;
 		text-align: right;
 	}
 	@media (min-width: 1150px) {
-		margin: 40% 0px 0px 0px;
-		max-width: 550px;
+		margin: 230px 0px 0px 0px;
+		max-width: 420px;
 		text-align: right;
 	}
 	> a {
