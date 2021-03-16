@@ -9,7 +9,6 @@ import LogoImage from "../../images/Logo.svg"
 export function Header() {
 	const [menuOpen, setMenuOpen] = useState(false)
 	const siteConfig = useSiteConfigQuery()
-	const pathname = window.location.pathname
 	return (
 		<HeaderWrapper>
 			<Logo to="/">
