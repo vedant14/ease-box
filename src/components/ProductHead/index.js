@@ -7,6 +7,7 @@ import {
 } from "./styles"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 export function ProductHead({ data }) {
 	return (
@@ -38,10 +39,12 @@ export function ProductHead({ data }) {
 					))}
 				</ul>
 				<div>
-					<button>
-						<h4>Buy this box</h4>
-					</button>
-					<Link to="/">View return policy</Link>
+					<a href={data.Link} target="_blank">
+						<button>
+							<h4>Buy this box</h4>
+						</button>
+					</a>
+					<AnchorLink href="#FAQs">View return policy</AnchorLink>
 				</div>
 			</ProductText>
 		</ProductHeadWrapper>

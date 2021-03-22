@@ -55,7 +55,7 @@ export const ProductText = styled.div`
 	}
 	> div:last-child {
 		margin-top: 20px;
-		> button {
+		> a > button {
 			border: none;
 			background: ${colors.primary};
 			border: 2px solid ${colors.primary};
@@ -76,7 +76,7 @@ export const ProductText = styled.div`
 				text-transform: capitalize;
 			}
 		}
-		> a {
+		> a:last-child {
 			font-style: normal;
 			font-weight: 200;
 			font-size: 14px;

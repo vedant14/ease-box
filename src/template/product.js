@@ -30,6 +30,7 @@ export const query = graphql`
 				BoxPrice
 				BoxLabel
 				BoxDescription
+				Link
 				BoxAdditional {
 					childMarkdownRemark {
 						html
