@@ -2,6 +2,7 @@ import React from "react"
 import { FooterWrapper } from "./styles"
 import { Container } from "react-bootstrap"
 import { Link } from "gatsby"
+import HappyMan from "../../images/happy.png"
 
 export function Footer() {
 	return (
@@ -12,17 +13,25 @@ export function Footer() {
 						<li>
 							<h3>Contact: </h3>
 							<h4>
-								<a href="http://wa.me/+919172280651">Connect with Us</a>,{" "}
-								<a href="mailto:contact@easebox.in">Email</a>
+								<a href="http://wa.me/+919172280651" target="_blank">
+									Connect with Us
+								</a>
+								, <a href="mailto:contact@easebox.in">Email</a>
 							</h4>
 						</li>
 						<li>
 							<h3>Social: </h3>
 							<h4>
-								<a href="https://www.instagram.com/easebox.in/?igshid=1x8lto6gsn2mb">
+								<a
+									href="https://www.instagram.com/easebox.in/?igshid=1x8lto6gsn2mb"
+									target="_blank"
+								>
 									Instagram
 								</a>
-								, <a href="https://www.facebook.com/easebox.in">Facebook</a>
+								,{" "}
+								<a href="https://www.facebook.com/easebox.in" target="_blank">
+									Facebook
+								</a>
 							</h4>
 						</li>
 						<li>
@@ -35,10 +44,10 @@ export function Footer() {
 					</ul>
 				</div>
 				<div>
-					<img src="https://dummyimage.com/600x400/000/fff" />
-					<h3>
-						<Link to="/boxes">Shop our boxes ⟶</Link>
-					</h3>
+					<Link to="/boxes">
+						<img src={HappyMan} />
+						<h3>Shop our boxes ⟶</h3>
+					</Link>
 				</div>
 			</Container>
 		</FooterWrapper>
