@@ -10,7 +10,9 @@ export function ProductDetails({ items }) {
 						{boxmap.data.MappingProduct.map(product => (
 							<div>
 								<h3>
-									<strong>{product.data.ProductName}</strong>
+									<strong>
+										{product.data.ProductName} x {boxmap.data.MappingQty}
+									</strong>
 								</h3>
 								<h3>{product.data.ProductDescription}</h3>
 							</div>
