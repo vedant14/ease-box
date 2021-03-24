@@ -21,7 +21,7 @@ export const HeaderWrapper = styled.header`
 export const Logo = styled(Link)`
   margin: auto auto auto 30px;
   > img {
-    width: 80px;
+    width: 150px;
   }
   @media screen and (min-width: 728px) {
     margin: auto 50px auto 100px;

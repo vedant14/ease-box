@@ -5,7 +5,6 @@ import {
 	ProductImage,
 	ProductText,
 } from "./styles"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
@@ -39,7 +38,7 @@ export function ProductHead({ data }) {
 					))}
 				</ul>
 				<div>
-					<a href={data.Link} target="_blank">
+					<a href={data.Link} target="_blank" rel="noreferrer">
 						<button>
 							<h4>Buy this box</h4>
 						</button>
