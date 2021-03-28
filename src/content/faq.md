@@ -10,7 +10,7 @@ question:
   - id: "item-3"
     question: "Q3: Who are you people?"
     answer: "Two regular guys who've moved out from their native city. Mandar and Vedant moved from our hometown a couple of years ago. We were really exited to face the brave new world at first but sometimes the small things suck the fun out of everything. That's how we came up with this idea in the first place."
-	- id: "item-4"
+  - id: "item-4"
     question: "Q4: Where are you currently available?"
     answer: "We are two guys, so yes the operations currently is limited. We can currently serve our customers only in Pune and Bangalore. Let's hope we can earn enough to add more members and serve in more cities."
 ---
