@@ -14,7 +14,7 @@ const ProductPage = ({
 }) => {
 	return (
 		<Layout box faq>
-			<SEO />
+			<SEO title={data.BoxName} description="Move-in with Convenience" />
 			<ProductHead data={data} />
 			<BestFor text={data.BoxAdditional} />
 			<ProductDetails items={data.BoxMapping} />

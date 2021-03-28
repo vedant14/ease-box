@@ -1,10 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 import { Container } from "react-bootstrap"
+
 const PrivacyPage = ({ data }) => {
 	return (
 		<Layout>
+			<SEO title="Privacy Page" description="Move-in with Convenience" />
 			<Container>
 				<div
 					dangerouslySetInnerHTML={{
