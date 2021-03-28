@@ -7,7 +7,6 @@ import {
 	BoxImages,
 	BoxButton,
 	Card,
-	Label,
 	ProductImage,
 } from "./styles"
 import Slider from "react-slick"
@@ -25,7 +24,7 @@ export function Boxes() {
 	const products = useStaticQuery(graphql`
 		query {
 			allAirtable(
-				sort: { order: ASC, fields: data___BoxName }
+				sort: { order: ASC, fields: data___BoxPrice }
 				filter: { data: { BoxName: { ne: null } } }
 			) {
 				edges {
@@ -66,7 +65,6 @@ export function Boxes() {
 										node.data.BoxAttachments.localFiles[0].childImageSharp.fluid
 									}
 								/>
-								{/* <Label>{node.data.BoxName}</Label> */}
 							</Card>
 						))}
 					</Slider>
