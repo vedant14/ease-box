@@ -15,7 +15,7 @@ export function ProductList() {
 	const products = useStaticQuery(graphql`
 		query {
 			allAirtable(
-				sort: { order: ASC, fields: data___BoxName }
+				sort: { order: ASC, fields: data___BoxPrice }
 				filter: { data: { BoxName: { ne: null } } }
 			) {
 				edges {
@@ -61,9 +61,6 @@ export function ProductList() {
 					<ProductContainer col={i}>
 						<Container>
 							<div>
-								<LabelStrip>
-									{node.data.BoxLabel && <small>{node.data.BoxLabel}</small>}
-								</LabelStrip>
 								<ProductImage
 									fluid={
 										node.data.BoxAttachments.localFiles[0].childImageSharp.fluid
@@ -72,10 +69,17 @@ export function ProductList() {
 								<ProductPrice>Rs. {node.data.BoxPrice}</ProductPrice>
 							</div>
 							<ProductText>
-								<h2>{node.data.BoxName}</h2>
+								<div>
+									<h2>{node.data.BoxName}</h2>
+									{node.data.BoxLabel && (
+										<LabelStrip>
+											<small>{node.data.BoxLabel}</small>
+										</LabelStrip>
+									)}
+								</div>
 								<h3>{node.data.BoxDescription}</h3>
 								<ul>
-									{node.data.BoxMapping.map(boxmap => (
+									{node.data.BoxMapping.slice(0, 5).map(boxmap => (
 										<React.Fragment>
 											{boxmap.data.MappingProduct.map(product => (
 												<li>
@@ -87,6 +91,9 @@ export function ProductList() {
 											))}
 										</React.Fragment>
 									))}
+									<li>
+										<h4>... And more</h4>
+									</li>
 								</ul>
 							</ProductText>
 						</Container>

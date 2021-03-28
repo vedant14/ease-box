@@ -8,7 +8,7 @@ export const ProductHeadWrapper = styled(Container)`
 	grid-template-areas:
 		"img"
 		"text";
-	grid-gap: 5px;
+	grid-gap: 25px;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	@media (min-width: 768px) {
@@ -38,7 +38,7 @@ export const ProductImage = styled.div`
 	}
 `
 export const ProductText = styled.div`
-	margin: auto;
+	margin: 0px;
 	grid-area: text;
 	> div:first-child {
 		display: flex;

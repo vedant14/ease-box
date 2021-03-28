@@ -30,19 +30,68 @@ export const ProductContainer = styled.div`
 		> div:first-child {
 			grid-area: img;
 		}
+		&:hover {
+			> div > div > div {
+				animation-iteration-count: infinite;
+				animation: shake 1s;
+			}
+		}
+	}
+	@keyframes shake {
+		0% {
+			transform: translate(1px, 1px) rotate(0deg);
+		}
+		10% {
+			transform: translate(-1px, -2px) rotate(-1deg);
+		}
+		20% {
+			transform: translate(-3px, 0px) rotate(1deg);
+		}
+		30% {
+			transform: translate(3px, 2px) rotate(0deg);
+		}
+		40% {
+			transform: translate(1px, -1px) rotate(1deg);
+		}
+		50% {
+			transform: translate(-1px, 2px) rotate(-1deg);
+		}
+		60% {
+			transform: translate(-3px, 1px) rotate(0deg);
+		}
+		70% {
+			transform: translate(3px, 1px) rotate(-1deg);
+		}
+		80% {
+			transform: translate(-1px, -1px) rotate(1deg);
+		}
+		90% {
+			transform: translate(1px, 2px) rotate(0deg);
+		}
+		100% {
+			transform: translate(1px, -2px) rotate(-1deg);
+		}
 	}
 `
 
 export const LabelStrip = styled.div`
-	position: relative;
 	background: ${colors.secondary};
+	position: relative;
 	width: fit-content;
-	padding: 5px 10px;
+	height: fit-content;
+	margin-left: 10px;
+	padding: 2px 10px;
+	top: 10%;
 	border-radius: 5px;
-	left: 20%;
-	top: 15%;
-	z-index: 5;
 	color: ${colors.white};
+	> small {
+		font-size: 12px;
+		line-height: 26px;
+	}
+	&:hover {
+		color: ${colors.primary};
+		background: ${colors.white};
+	}
 `
 
 export const ProductPrice = styled.div`
@@ -56,12 +105,21 @@ export const ProductPrice = styled.div`
 	}
 	color: ${colors.white};
 `
+
 export const ProductImage = styled(Img)`
 	margin: auto;
-	width: 400px;
+	max-width: 400px;
 `
+
 export const ProductText = styled.div`
 	margin: auto;
+	> div:first-child {
+		display: flex;
+		> h2 {
+			margin: auto 0px;
+		}
+		margin: 10px 0px;
+	}
 	color: ${colors.primaryBlack};
 	padding-bottom: 30px;
 	grid-area: text;

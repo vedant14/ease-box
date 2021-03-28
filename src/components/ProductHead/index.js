@@ -22,21 +22,6 @@ export function ProductHead({ data }) {
 				<h3>Rs. {data.BoxPrice} /-</h3>
 				<hr />
 				<h3>{data.BoxDescription}</h3>
-				<h4>This box contains -</h4>
-				<ul>
-					{data.BoxMapping.map(boxmap => (
-						<React.Fragment>
-							{boxmap.data.MappingProduct.map(product => (
-								<li>
-									<h4>
-										{boxmap.data.MappingQty}
-										{product.data.ProductName}
-									</h4>
-								</li>
-							))}
-						</React.Fragment>
-					))}
-				</ul>
 				<div>
 					<a href={data.Link} target="_blank" rel="noreferrer">
 						<button>

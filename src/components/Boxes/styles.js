@@ -82,13 +82,3 @@ export const Card = styled(Link)`
 export const ProductImage = styled(Img)`
 	margin: auto;
 `
-
-export const Label = styled.h4`
-	position: absolute;
-	background: ${colors.secondary};
-	color: white;
-	right: 400px;
-	width: fit-content;
-	padding: 10px 15px;
-	border-radius: 10px;
-`

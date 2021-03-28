@@ -13,7 +13,11 @@ export function Footer() {
 						<li>
 							<h3>Contact: </h3>
 							<h4>
-								<a href="http://wa.me/+919172280651" target="_blank">
+								<a
+									href="http://wa.me/+919172280651"
+									target="_blank"
+									rel="noreferrer"
+								>
 									Connect with Us
 								</a>
 								, <a href="mailto:contact@easebox.in">Email</a>
@@ -25,11 +29,16 @@ export function Footer() {
 								<a
 									href="https://www.instagram.com/easebox.in/?igshid=1x8lto6gsn2mb"
 									target="_blank"
+									rel="noreferrer"
 								>
 									Instagram
 								</a>
 								,{" "}
-								<a href="https://www.facebook.com/easebox.in" target="_blank">
+								<a
+									href="https://www.facebook.com/easebox.in"
+									target="_blank"
+									rel="noreferrer"
+								>
 									Facebook
 								</a>
 							</h4>
@@ -45,7 +54,7 @@ export function Footer() {
 				</div>
 				<div>
 					<Link to="/boxes">
-						<img src={HappyMan} />
+						<img src={HappyMan} alt="Shop at easebox" />
 						<h3>Shop our boxes ⟶</h3>
 					</Link>
 				</div>

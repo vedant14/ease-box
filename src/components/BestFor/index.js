@@ -1,7 +1,5 @@
 import React from "react"
 import { DetailsWrapper, MobileWrapper } from "./styles"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 export function BestFor({ text }) {
 	return (

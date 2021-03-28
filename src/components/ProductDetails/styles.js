@@ -28,8 +28,9 @@ export const DetailsWrapper = styled(Container)`
 			grid-template-columns: 1fr 1fr;
 		}
 		> div {
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-gap: 5px;
+			grid-template-columns: 1fr 2fr;
 			padding: 5px;
 			border: 1px dotted ${colors.primary};
 			> h3 {
