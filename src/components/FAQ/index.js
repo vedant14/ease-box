@@ -7,11 +7,21 @@ import { Scroll } from "../Scroll"
 export function FAQ() {
 	const FAQtext = useStaticQuery(graphql`
 		query {
-			markdownRemark(frontmatter: { type: { eq: "FAQ" } }) {
-				frontmatter {
-					question {
-						question
-						answer
+			allAirtable(
+				filter: { table: { eq: "FAQ" } }
+				sort: { fields: data___QuestionOrder, order: ASC }
+			) {
+				edges {
+					node {
+						data {
+							QuestionOrder
+							Question
+							Answer {
+								childMarkdownRemark {
+									html
+								}
+							}
+						}
 					}
 				}
 			}
@@ -23,9 +33,13 @@ export function FAQ() {
 			<Container>
 				<h1 style={{ marginBottom: 40 }}>Frequently Asked Questions</h1>
 				<div>
-					{FAQtext.markdownRemark.frontmatter.question.map(faqs => (
-						<FaqItem title={faqs.question} key={faqs.question}>
-							{faqs.answer}
+					{FAQtext.allAirtable.edges.map(({ node }, i) => (
+						<FaqItem title={node.data.Question} key={i}>
+							<div
+								dangerouslySetInnerHTML={{
+									__html: node.data.Answer.childMarkdownRemark.html,
+								}}
+							/>
 						</FaqItem>
 					))}
 				</div>

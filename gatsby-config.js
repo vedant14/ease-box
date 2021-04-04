@@ -53,8 +53,8 @@ module.exports = {
 				name: `gatsby-starter-default`,
 				short_name: `starter`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#AC3571`,
+				theme_color: `#AC3571`,
 				display: `minimal-ui`,
 				icon: `src/images/Logo.png`, // This path is relative to the root of the site.
 			},
@@ -82,6 +82,13 @@ module.exports = {
 					{
 						baseId: `apps0ewHWEXiQKPdn`,
 						tableName: `Products`,
+					},
+					{
+						baseId: `apps0ewHWEXiQKPdn`,
+						tableName: `FAQ`,
+						mapping: {
+							Answer: `text/markdown`,
+						},
 					},
 				],
 			},

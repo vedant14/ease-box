@@ -27,15 +27,17 @@ export const DetailsWrapper = styled(Container)`
 		@media (min-width: 768px) {
 			grid-template-columns: 1fr 1fr;
 		}
-		> div {
-			display: grid;
-			grid-gap: 5px;
-			grid-template-columns: 1fr 2fr;
-			padding: 5px;
-			border: 1px dotted ${colors.primary};
-			> h3 {
-				margin: 0px 10px;
-			}
-		}
+	}
+`
+
+export const TextWrapper = styled.div`
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: 1fr 2fr;
+	padding: 5px;
+	border: 1px dotted ${colors.primary};
+	> h5 {
+		margin: 0px 10px;
+		font-size: 1rem;
 	}
 `

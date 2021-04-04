@@ -39,10 +39,12 @@ export const query = graphql`
 				BoxMapping {
 					data {
 						MappingQty
+						Segment
 						MappingProduct {
 							data {
 								ProductName
 								ProductDescription
+								ProductSegment
 							}
 						}
 					}
