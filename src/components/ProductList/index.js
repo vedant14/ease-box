@@ -20,9 +20,9 @@ export function ProductList() {
 			) {
 				edges {
 					node {
-						recordId
 						data {
 							BoxName
+							slug
 							BoxPrice
 							BoxLabel
 							BoxDescription
@@ -57,7 +57,7 @@ export function ProductList() {
 				<h2>Shop Boxes</h2>
 			</HeadStrip>
 			{products.allAirtable.edges.map(({ node }, i) => (
-				<Link key={i} to={node.recordId}>
+				<Link key={i} to={node.data.slug}>
 					<ProductContainer col={i}>
 						<Container>
 							<div>

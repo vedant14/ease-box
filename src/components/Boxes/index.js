@@ -29,9 +29,9 @@ export function Boxes() {
 			) {
 				edges {
 					node {
-						recordId
 						data {
 							BoxName
+							slug
 							BoxPrice
 							BoxLabel
 							BoxAttachments {
@@ -59,7 +59,7 @@ export function Boxes() {
 				<BoxImages>
 					<Slider {...settings}>
 						{products.allAirtable.edges.map(({ node }, i) => (
-							<Card key={i} to={`boxes/${node.recordId}`}>
+							<Card key={i} to={`boxes/${node.data.slug}`}>
 								<ProductImage
 									fluid={
 										node.data.BoxAttachments.localFiles[0].childImageSharp.fluid

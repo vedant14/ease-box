@@ -9,6 +9,9 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               recordId
               id
+              data {
+                slug
+              }
             }
           }
         }
@@ -18,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
     // values in context Object are available in that page's query
     result.data.allAirtable.edges.forEach(({ node }) => {
       createPage({
-        path: `boxes/${node.recordId}`,
+        path: `boxes/${node.data.slug}`,
         component: path.resolve(`./src/template/product.js`),
         context: {
           RecordID: node.recordId,
