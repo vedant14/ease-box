@@ -21,7 +21,6 @@ export function ProductDetails({ items }) {
 							))}
 						</React.Fragment>
 					))}
-				}
 			</div>
 		</DetailsWrapper>
 	)
