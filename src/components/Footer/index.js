@@ -14,7 +14,7 @@ export function Footer() {
 							<h3>Contact: </h3>
 							<h4>
 								<a
-									href="http://wa.me/+919172280651"
+									href="http://wa.me/+919767137428"
 									target="_blank"
 									rel="noreferrer"
 								>
